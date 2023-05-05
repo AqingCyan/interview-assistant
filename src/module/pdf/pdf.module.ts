@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common'
 import { PdfController } from './pdf.controller'
 import { PdfService } from './pdf.service'
-import { GptModule } from '../gpt/gpt.module'
+import { TaskModule } from '../task/task.module'
 
 @Module({
-  imports: [GptModule],
+  imports: [TaskModule],
   controllers: [PdfController],
   providers: [PdfService],
 })

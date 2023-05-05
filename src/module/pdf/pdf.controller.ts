@@ -8,7 +8,7 @@ export class PdfController {
 
   @Post('parse')
   @UseInterceptors(FileInterceptor('file'))
-  async parsePdf(@UploadedFile() file): Promise<string> {
+  async parsePdf(@UploadedFile() file) {
     return await this.pdfService.parsePdf(file.buffer)
   }
 }
